@@ -46,7 +46,7 @@ function onAdd () {
     trashBtn.innerHTML = '<i class="fas fa-trash"></i>'
     trashBtn.setAttribute('class', 'trash-btn')
     trashBtn.addEventListener('click', () => {
-        trashBtn.parentElement.remove()
+        li.remove()
     })
     
       
