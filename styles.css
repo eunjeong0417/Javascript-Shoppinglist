@@ -9,8 +9,9 @@ body {
 
 .container {
   background-color: #f1f0f7;
-  width: 400px;
   margin: auto;
+  width: 400px;
+  height: 100%;
   border-radius: 10px;
 }
 
@@ -38,6 +39,7 @@ body {
 }
 
 footer {
+  margin-top: 300px;
   padding: 0.3em;
   height: 35px;
   border-radius: 0 0 10px 10px;
@@ -50,9 +52,14 @@ footer {
 }
 
 .li-el {
+  padding: 0.2em;
+  width: 330px;
+  display: flex;
+  justify-content: space-between;
   list-style: none;
   overflow-y: auto;
   margin-bottom: 0.5em;
+  margin-left: 2em;
 }
 
 .check-btn {
@@ -66,14 +73,20 @@ footer {
 
 .trash-btn:hover,
 .check-btn:hover,
-.btn_plus:hover {
+.btn_plus:hover,
+.arrowBtn:hover {
   cursor: pointer;
 }
-
 .trash-btn,
 .check-btn,
-.btn_plus {
+.btn_plus,
+.arrowBtn {
   outline: none;
   background: transparent;
   border: none;
+  font-size: 17px;
+}
+
+.class {
+  margin-left: 0;
 }
