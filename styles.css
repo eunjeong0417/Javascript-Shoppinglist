@@ -1,0 +1,15 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  background-color: red;
+  display: flex;
+}
+/* .ul-el {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  list-style: none;
+} */
