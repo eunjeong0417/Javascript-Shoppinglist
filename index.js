@@ -3,23 +3,20 @@ const plusBtn = document.querySelector('.btn_plus')
 const ulEl = document.querySelector('.ul-el')
 
 
+//plus버튼에 click 이벤트 걸기
 plusBtn.addEventListener('click', onAdd)
 
-// inputEl.addEventListener("keypress", (e) => {
-// //keypress 이벤트
-// //13은 엔터키의 코드를 의미한다
-// //엔터키가 눌려지고 input의 값이 있다면(&&) onAdd 함수를 실행
-//     if (e.keyCode === 13 && inputEl.value) {
-//         onAdd()       
-//     } else {
-//         alert('쇼핑목록을 입력하세요')
-//         inputEl.focus()
-// //input에 focus를 넣어준다
-//     }
-// })
+inputEl.addEventListener('keydown', (e) => {
+//keydown 이벤트
+//13은 엔터키의 코드를 의미한다
+//엔터키가 눌려지고 onAdd 함수를 실행
+    if (e.keyCode === 13 ) {
+        onAdd();
+    }
+})
 
 
-function onAdd () {
+function onAdd() {
 
 //input value가 있으면 리스트에 추가하고
 //없으면 alert창 띄운다
@@ -52,8 +49,8 @@ function onAdd () {
     arrowBtn.innerHTML = '<i class="fas fa-arrow-up"></i>'
     arrowBtn.setAttribute('class', 'arrowBtn')
     
-        const divEl = document.createElement("div")
-        divEl.setAttribute('class', 'divEl')
+    const divEl = document.createElement("div")
+    divEl.setAttribute('class', 'divEl')
 
 //div태그에 각각의 버튼을 넣어준다
     divEl.appendChild(checkBtn)
@@ -68,7 +65,8 @@ function onAdd () {
 
 
     inputEl.value = ""
-//입력을 한 뒤에는 input창을 비운다
+//입력을 한 뒤에는 input을 초기화한다
+        
     inputEl.focus()
 //input에 focus를 시켜준다
         
