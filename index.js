@@ -5,20 +5,18 @@ const ulEl = document.querySelector('.ul-el')
 
 plusBtn.addEventListener('click', onAdd)
 
-inputEl.addEventListener("keypress", (e) => {
-//keypress 이벤트
-//13은 엔터키의 코드를 의미한다
-//엔터키가 눌려지고 input의 값이 있다면 onAdd 함수를 실행
-    if (e.keyCode === 13 && inputEl.value) {
-        onAdd()       
-    } else {
-        alert('쇼핑목록을 입력하세요')
-        inputEl.focus()
-//input에 focus를 넣어준다
-    }
-})
-
-
+// inputEl.addEventListener("keypress", (e) => {
+// //keypress 이벤트
+// //13은 엔터키의 코드를 의미한다
+// //엔터키가 눌려지고 input의 값이 있다면(&&) onAdd 함수를 실행
+//     if (e.keyCode === 13 && inputEl.value) {
+//         onAdd()       
+//     } else {
+//         alert('쇼핑목록을 입력하세요')
+//         inputEl.focus()
+// //input에 focus를 넣어준다
+//     }
+// })
 
 
 function onAdd () {
@@ -49,7 +47,7 @@ function onAdd () {
         li.remove()
     })
     
-      
+
     const arrowBtn = document.createElement("button")
     arrowBtn.innerHTML = '<i class="fas fa-arrow-up"></i>'
     arrowBtn.setAttribute('class', 'arrowBtn')

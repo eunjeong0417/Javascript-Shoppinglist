@@ -71,6 +71,13 @@ footer {
   color: rgb(228, 48, 17);
 }
 
+.btn_plus {
+  transition: transform 300ms ease-in;
+}
+.btn_plus:hover {
+  transform: scale(1.3);
+}
+
 .trash-btn:hover,
 .check-btn:hover,
 .btn_plus:hover,
