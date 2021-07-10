@@ -29,22 +29,27 @@ function onAdd() {
     li.innerText = inputEl.value
 //li태그 안에 입력받은 input의 value 값을 넣어준다
 
+
+//이벤트 위임
+//list 태그 하위의 버튼 이벤트를 list 태그에 위임하여 처리
+    li.addEventListener('click', (e) => {
+         if (e.target.classList.contains("fa-trash")) {
+            e.currentTarget.remove();
+        } else if (e.target.classList.contains("fa-check")) {
+            e.currentTarget.classList.add('line-through')
+         }
+    })
+
     const checkBtn = document.createElement("button")
     checkBtn.setAttribute('class', 'check-btn')
     checkBtn.innerHTML = '<i class="fas fa-check"></i>';
-    checkBtn.addEventListener('click', () => {
-        li.classList.add('line-through')
-    })
 
 
     const trashBtn = document.createElement("button")
     trashBtn.innerHTML = '<i class="fas fa-trash"></i>'
     trashBtn.setAttribute('class', 'trash-btn')
-    trashBtn.addEventListener('click', () => {
-        li.remove()
-    })
-    
 
+    
     const arrowBtn = document.createElement("button")
     arrowBtn.innerHTML = '<i class="fas fa-arrow-up"></i>'
     arrowBtn.setAttribute('class', 'arrowBtn')
